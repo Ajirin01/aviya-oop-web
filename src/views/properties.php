@@ -121,7 +121,7 @@
                             </div>
                             <div class="aa-properties-detial">
                                 <span class="aa-price">
-                                <?php echo $property->acf->price ?>
+                                N <?php echo $property->acf->price ?>
                                 </span>
                                 <a class="aa-secondary-btn" href="details?id=<?php echo $property->id; ?>">View Details</a>
                             </div>
@@ -135,7 +135,7 @@
               </ul>
             </div>
             <!-- Start properties content bottom -->
-            <div class="aa-properties-content-bottom">
+            <!-- <div class="aa-properties-content-bottom">
               <nav>
                 <ul class="pagination">
                   <li>
@@ -155,7 +155,7 @@
                   </li>
                 </ul>
               </nav>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- Start properties sidebar -->

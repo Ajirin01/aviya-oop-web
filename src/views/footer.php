@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="aa-footer-left">
-               <p>Powered by <a rel="nofollow" href="https://www.digirealm.com.ng/">Digi-Realm City Solution</a></p>
+               <p><a href="sync"><i class="fa fa-refresh"></i></a> Powered by <a rel="nofollow" href="https://www.digirealm.com.ng/">Digi-Realm City Solution</a></p>
               </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">

@@ -9,25 +9,25 @@
         <img src="src/assets/img/slider/slider5.jpg" alt="img">
         <!-- Top slider content -->
         <div class="aa-top-slider-content">
-          <span class="aa-top-slider-catg">5 bedroom fully detached with BQ</span>
-          <h2 class="aa-top-slider-title">500 Square Metre</h2>
-          <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Katampe Extension, Abuja</p>
+          <span class="aa-top-slider-catg">Welcome to Aviya Residence and Apartment</span>
+          <h2 class="aa-top-slider-title">Home of modern residence design</h2>
+          <p class="aa-top-slider-location"></i>Find your dream home on today</p>
           <span class="aa-top-slider-off">Outright Payment Attracts 10% Discount</span>
-          <p class="aa-top-slider-price">N20,000,000</p>
-          <!--<a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>-->
+          <!-- <p class="aa-top-slider-price">Contact Us</p> --> <br>
+          <a href="contact" class="aa-top-slider-btn">Contact Us<span class="fa fa-angle-double-right"></span></a>
         </div>
         <!-- / Top slider content -->
       </div>
       <!-- Top slider single slide -->
       <div class="aa-top-slider-single">
-        <img src="src/assets/img/slider/slider42.jpg" alt="img">
+        <img src="src/assets/img/slider/semi_detached.png" alt="img">
         <!-- Top slider content -->
         <div class="aa-top-slider-content">
-          <span class="aa-top-slider-catg">4 bedroom fully detached duplex with BQ</span>
-          <h2 class="aa-top-slider-title">400 Square Metre</h2>
+          <span class="aa-top-slider-catg">Looking for perfect home?</span>
+          <h2 class="aa-top-slider-title">Don't worry, got you covered</h2>
           <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Katampe Extension, Abuja</p>
           <span class="aa-top-slider-off">Outright Payment Attracts 10% Discount</span>
-          <p class="aa-top-slider-price">N18,000,000</p>
+          <p class="aa-top-slider-price">All at affordable prices</p>
           <!--<a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>-->
         </div>
         <!-- / Top slider content -->
@@ -35,14 +35,14 @@
       <!-- / Top slider single slide -->
       <!-- Top slider single slide -->
       <div class="aa-top-slider-single">
-        <img src="src/assets/img/slider/semi_detached_300.jpg" alt="img">
+        <img src="src/assets/img/slider/slider2.jpg" alt="img">
         <!-- Top slider content -->
         <div class="aa-top-slider-content">
-          <span class="aa-top-slider-catg">3 bedroom semi-detached duplex with BQ</span>
-          <h2 class="aa-top-slider-title">300 Square Metre</h2>
-          <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Katampe Extension, Abuja</p>
-          <span class="aa-top-slider-off">Outright Payment Attracts 10% Discount</span>
-          <p class="aa-top-slider-price">N15,000,000</p>
+          <span class="aa-top-slider-catg">Our clients give postive feedback always</span>
+          <h2 class="aa-top-slider-title">Your satisfaction is our goal</h2>
+          <p class="aa-top-slider-location"><i class="fa fa-thumb"></i>Aviya always here for you</p>
+          <span class="aa-top-slider-off">Need help?</span>
+          <p class="aa-top-slider-price">Chat with our agent</p>
           <!--<a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>-->
         </div>
         <!-- / Top slider content -->
@@ -121,15 +121,16 @@
         <div class="aa-latest-properties-content">
           <div class="row">
             <?php
-                foreach(json_decode($properties) as $property){
+                foreach(json_decode($properties) as $key => $property){
+                    if($key == 6){break;}
                     $id = $property->acf->photo;
                     $photo_path = $media_obj->find($id);
                     ?>
                     <div class="col-md-4">
                         <article class="aa-properties-item">
-                        <a href="#" class="aa-properties-item-img">
+                        <a href="details?id=<?php echo $property->id; ?>" class="aa-properties-item-img">
                             
-                            <img src="<?php echo $photo_path[0]['guid']['rendered']; ?>" alt="img">
+                            <img width="370" height="400" src="<?php echo $photo_path[0]['guid']['rendered']; ?>" alt="img">
                         </a>
                         <div class="aa-tag for-sale">
                             For Sale
@@ -141,12 +142,12 @@
                             <span><?php echo $property->acf->size; ?></span>
                             </div>
                             <div class="aa-properties-about">
-                            <h3><a href="#"><?php echo $property->acf->title; ?></a></h3>
+                            <h3><a href="details?id=<?php echo $property->id; ?>"><?php echo $property->acf->title; ?></a></h3>
                             <p><?php echo $property->acf->location; ?></p>                      
                             </div>
                             <div class="aa-properties-detial">
                             <span class="aa-price">
-                                N<?php echo $property->acf->price; ?>
+                                N <?php echo $property->acf->price; ?>
                             </span>
                             <a href="details?id=<?php echo $property->id; ?>" class="aa-secondary-btn">View Details</a>
                             </div>
