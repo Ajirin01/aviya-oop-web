@@ -212,7 +212,8 @@ jQuery(function($){
         ];
 
         skipSlider.noUiSlider.on('update', function( values, handle ) {
-          skipValues[handle].innerHTML = values[handle];
+          skipValues[handle].innerHTML = Number(values[handle]);
+          document.getElementById('size').value = [Number(skipValues[0].innerHTML), Number(skipValues[1].innerHTML)]
         });
 
         // FOR PRICE SECTION
@@ -220,21 +221,31 @@ jQuery(function($){
         var skipSlider2 = document.getElementById('aa-price-range');
         noUiSlider.create(skipSlider2, {
             range: {
-                'min': 0,
-                '10%': 100,
-                '20%': 200,
-                '30%': 300,
-                '40%': 400,
-                '50%': 500,
-                '60%': 600,
-                '70%': 700,
-                '80%': 800,
-                '90%': 900,
-                'max': 1000
+                'min': 3,
+                '5%': 5,
+                '10%': 10,
+                '15%': 15,
+                '20%': 20,
+                '25%': 25,
+                '30%': 30,
+                '35%': 35,
+                '40%': 40,
+                '45%': 45,
+                '50%': 50,
+                '55%': 55,
+                '60%': 60,
+                '65%': 65,
+                '70%': 70,
+                '75%': 75,
+                '80%': 80,
+                '85%': 85,
+                '90%': 90,
+                '95%': 95,
+                'max': 100,
             },
             snap: true,
             connect: true,
-            start: [200, 700]
+            start: [30, 70]
         });
         // for value print
         var skipValues2 = [
@@ -243,7 +254,8 @@ jQuery(function($){
         ];
 
         skipSlider2.noUiSlider.on('update', function( values, handle ) {
-          skipValues2[handle].innerHTML = values[handle];
+          skipValues2[handle].innerHTML = Number(values[handle]);
+          document.getElementById('price').value = [Number(skipValues2[0].innerHTML), Number(skipValues2[1].innerHTML)]
         });
       }
     });

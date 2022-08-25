@@ -1,4 +1,4 @@
 <?php 
-    $content = file_get_contents(__DIR__.'/src/templates/contact.php');
-    require_once(__DIR__.'/src/templates/layouts/site_layout.php');
+    $content = __DIR__.'/src/views/contact.php';
+    require_once(__DIR__.'/src/views/layouts/site_layout.php');
 ?>

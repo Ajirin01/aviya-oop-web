@@ -1,7 +1,7 @@
 <?php
-    require_once('controllers/PropertyController.php');
+    require_once('models/Property.php');
 
-    $property = new PropertyController();
+    $property = new Property();
     
     $properties_json = file_get_contents('data/properties.json');
 

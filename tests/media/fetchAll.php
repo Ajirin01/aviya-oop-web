@@ -1,7 +1,7 @@
 <?php
-    require_once(dirname(__FILE__,3).'/controllers/MediaController.php');
+    require_once(dirname(__FILE__,3).'/models/Media.php');
 
-    $media = new MediaController();
+    $media = new Media();
     $result = $media->all();
 
     if(count(json_decode($result)) >= 0){
