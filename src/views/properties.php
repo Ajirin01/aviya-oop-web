@@ -104,7 +104,7 @@
                             For Sale
                             </div>
                             <div class="aa-properties-item-content">
-                            <div class="aa-properties-info">
+                            <div class="aa-properties-info" style="height: 70px">
                                 <?php
                                     $other_details = explode(",",$property->acf->others);
 
@@ -116,7 +116,7 @@
                                 <span style="float: right"><?php echo $property->acf->size ?></span>
                             </div>
                             <div class="aa-properties-about">
-                                <h3><a href="details?id=<?php echo $property->id; ?>"><?php echo $property->acf->title ?></a></h3>
+                                <h3 style="height: 100px"><a href="details?id=<?php echo $property->id; ?>"><?php echo $property->acf->title ?></a></h3>
                                 <!-- <p><?php echo str_replace("aa-properties-info", " ",substr($property->acf->short_description,50)); ?></p>                       -->
                             </div>
                             <div class="aa-properties-detial">
