@@ -12,10 +12,10 @@
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="aa-footer-middle">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=100084210009420&_rdc=1&_rdr"><i class="fa fa-facebook"></i></a>
+                <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+                <a href="https://www.youtube.com/results?search_query=aviya+residence"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.instagram.com/aviyaresidence/"><i class="fa fa-instagram"></i></a>
               </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
