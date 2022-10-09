@@ -1,8 +1,32 @@
-    <?php
-        require_once(dirname(__FILE__,3).'/models/Property.php');
-        $propertyModel = new Property();
-        $properties = json_decode($propertyModel->all());
-    ?>
+  <?php
+      require_once(dirname(__FILE__,3).'/models/Property.php');
+      require_once(dirname(__FILE__,3).'/controllers/paginator.php');
+
+      $propertyModel = new Property();
+      $properties = json_decode($propertyModel->all());
+
+
+
+      // pagination 
+      // page number can only be number
+      if(!isset($_GET['page']) || !preg_match("/^[0-9]/", $_GET['page'])){
+        echo "<script> window.location = '/properties?page=1' </script>";
+      }
+
+      $current = $_GET['page'];
+      
+      $obj = $properties;
+      $paginator = new Paginator($obj);
+
+      $pagination = $paginator->paginate(4);
+      
+      // page number can not be less than 1 and greater than last page
+      if(($_GET['page'] > $pagination[$current-1]['page']['last'])  || ($_GET['page'] < 1)){
+        echo "<script> window.location = '/properties?page=1' </script>";
+      }
+
+      $current_page_data = $pagination[$current-1]['data'];
+  ?>
   <!-- Start Proerty header  -->
 
   <section id="aa-property-header">
@@ -58,7 +82,7 @@
             <div class="aa-properties-content-body">
               <ul class="aa-properties-nav">
                 <?php 
-                    foreach ($properties as $key => $property) {
+                    foreach ($current_page_data as $key => $property) {
                         $id = $property->acf->photo;
                         $photo_path = $media_obj->find($id);
                 ?>
@@ -135,27 +159,37 @@
               </ul>
             </div>
             <!-- Start properties content bottom -->
-            <!-- <div class="aa-properties-content-bottom">
+
+            
+
+            <div class="aa-properties-content-bottom">
               <nav>
                 <ul class="pagination">
-                  <li>
-                    <a href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li class="active"><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li>
-                    <a href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
+
+                  <?php
+                      // pagination link min = 1
+                      if($current > 1){
+                          echo "<li style='display: inline'><a aria-label='Previous' href='?page=" . $pagination[$current-1]['page']['previous'] . "'onclick='goPage()'> <span aria-hidden='true''>&laquo;</span> </a></li>";
+                      }
+
+                      for ($i = 0; $i < count($pagination); $i++) {
+                          if($current == ($i+1)){
+                              echo "<li class='active'><a href='?page=" . ($i+1) . "'onclick='goPage()'>" . ($i+1) . "</a></li>";
+                          }else{
+                              echo "<li><a href='?page=" . ($i+1) . "'onclick='goPage()'>" . ($i+1) ."</a></li>";
+                          }
+                      }
+
+                      // pagination link max  = {pages}max
+                      if($current < $pagination[$current-1]['page']['last']){
+                          echo "<li><a aria-label='Next' href='?page=" . $pagination[$current-1]['page']['next'] .  "'onclick='goPage()'> <span aria-hidden='true'>&raquo;</span> </a></li>";
+
+                      }
+                  ?>
+                  
                 </ul>
               </nav>
-            </div> -->
+            </div>
           </div>
         </div>
         <!-- Start properties sidebar -->
