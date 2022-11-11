@@ -20,7 +20,7 @@
       </div>
       <!-- Top slider single slide -->
       <div class="aa-top-slider-single">
-        <img src="src/assets/img/slider/semi_detached.png" alt="img">
+        <img src="src/assets/img/slider/KIND.jpg" alt="img">
         <!-- Top slider content -->
         <div class="aa-top-slider-content">
           <span class="aa-top-slider-catg">Looking for perfect home?</span>
@@ -50,7 +50,7 @@
       <!-- / Top slider single slide -->
       <!-- Top slider single slide -->
       <div class="aa-top-slider-single">
-        <img src="src/assets/img/slider/slider7.png" alt="img">
+        <img src="src/assets/img/slider/slider7.jpg" alt="img">
         <!-- Top slider content -->
         <div class="aa-top-slider-content">
           <h2 class="aa-top-slider-title">AVIYA RESIDENCE &</h2>
