@@ -33,7 +33,7 @@
                 <p>Locate our office easily with the help of map direction. Please feel free to send us direct message, follow our social media pages and give us direct call. We are happy to be at your service</p>
                 <ul class="contact-info-list">
                   <li> <i class="fa fa-phone"></i> +2348094824579 | +2348163648797</li>
-                  <li> <i class="fa fa-envelope-o"></i> aviyaresidenceandapartmentltd@gmail.com</li>
+                  <li> <i class="fa fa-envelope-o"></i> aviyaresidenceandapartmentsltd@gmail.com</li>
                   <li> <i class="fa fa-map-marker"></i> No. 3, Elbe Close, off Panama Street,  Maitama,  Abuja.</li>
                 </ul>
               </div>
