@@ -104,7 +104,7 @@
 
   <!-- Start menu section -->
   <section id="aa-menu-area">
-    <nav class="navbar navbar-default main-navbar" role="navigation" style="background-image: url(/src/assets/img/chrismas.png)">  
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
       <div class="container">
         <div class="navbar-header">
           <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
@@ -122,8 +122,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a style="font-weight: 600" href="/">HOME</a></li>
-            <li><a style="font-weight: 600" href="properties">PROPERTIES</a></li>
+            <li><a href="/">HOME</a></li>
+            <li><a href="properties">PROPERTIES</a></li>
              <!-- <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -132,7 +132,7 @@
               </ul>
             </li> -->
             <!-- <li><a href="gallery.html">GALLERY</a></li>    -->
-            <li><a style="font-weight: 600" href="contact.php">CONTACT</a></li>
+            <li><a href="contact.php">CONTACT</a></li>
             <!-- <li><a href="404.html">404 PAGE</a></li> -->
           </ul>                            
         </div><!--/.nav-collapse -->       
