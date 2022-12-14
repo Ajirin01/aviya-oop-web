@@ -23,7 +23,7 @@
         <div class="media-body">
             <h4 class="media-heading"><a href="details?id=<?php echo $property->id; ?>"><?php echo $property->acf->title ?></a></h4>
             <!-- <p><?php //echo substr($property->acf->short_description, 50) ?></p>                 -->
-            <span><?php echo $property->acf->price ?></span>
+            <span><?php echo html_entity_decode('&#8358;', ENT_COMPAT | ENT_HTML401, 'UTF-8') . number_format($property->acf->price, 0, '.', ',') ?></span>
         </div>              
     </div>
 

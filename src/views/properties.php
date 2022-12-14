@@ -21,9 +21,12 @@
       $pagination = $paginator->paginate(4);
       
       // page number can not be less than 1 and greater than last page
-      if(($_GET['page'] > $pagination[$current-1]['page']['last'])  || ($_GET['page'] < 1)){
-        echo "<script> window.location = '/properties?page=1' </script>";
+      if(count($properties)>1){
+        if(($_GET['page'] > $pagination[$current-1]['page']['last'])  || ($_GET['page'] < 1)){
+          echo "<script> window.location = '/properties?page=1' </script>";
+        }
       }
+      
 
       $current_page_data = $pagination[$current-1]['data'];
   ?>
@@ -145,7 +148,7 @@
                             </div>
                             <div class="aa-properties-detial">
                                 <span class="aa-price">
-                                N <?php echo $property->acf->price ?>
+                                <?php echo html_entity_decode('&#8358;', ENT_COMPAT | ENT_HTML401, 'UTF-8') . number_format($property->acf->price, 0, '.', ',') ?>
                                 </span>
                                 <a class="aa-secondary-btn" href="details?id=<?php echo $property->id; ?>">View Details</a>
                             </div>

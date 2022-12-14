@@ -147,7 +147,7 @@
                             </div>
                             <div class="aa-properties-detial">
                             <span class="aa-price">
-                                N <?php echo $property->acf->price; ?>
+                              <?php echo html_entity_decode('&#8358;', ENT_COMPAT | ENT_HTML401, 'UTF-8') . number_format($property->acf->price, 0, '.', ',') ?>
                             </span>
                             <a href="details?id=<?php echo $property->id; ?>" class="aa-secondary-btn">View Details</a>
                             </div>
@@ -173,7 +173,7 @@
           <div class="aa-title">
             <h2>Our Service</h2>
             <span></span>
-            <p>The No.1 Nigerian real estate and property website with property in Nigeria for sale rent and lease</p>
+            <p>Aviya Residence and Apartment is a one-stop destination for all your real estate needs, offering a wide range of services from buying and selling properties to property management and rental services.</p>
           </div>
           <!-- service content -->
           <div class="aa-service-content">
@@ -236,11 +236,26 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="aa-promo-banner-area">
-          <h3>Find Your Best Property</h3>
-          <p>The No.1 Nigerian real estate and property website with property in Nigeria for sale rent and lease.
-            We offer Nigerian world class properties </p>
-          <a href="#" class="aa-view-btn">Coming soon...</a>
+        <div style="color: white; width: 70%; margin: 0 auto">
+          <h3 class="text-center" style="font-size: 2.5rem">More ways to find your dream home!</h3>
+          <p>Dear valued customers,</p>
+          <p>
+              We are excited to announce that we are expanding our services and adding new properties to our website, Aviya Residence and Apartment. In the coming weeks, you can expect to see an array of new and exciting offerings, including:
+          </p>
+          <ul style="list-style: circle; margin-left: 10px">
+            <li>
+                <p>A wider selection of homes and apartments in popular neighborhoods, with a range of prices and features to suit every budget and lifestyle.</p>
+            </li>
+          </ul>
+
+          <p>Stay tuned for more updates and thank you for choosing Aviya Residence and Apartment for all your real estate needs.</p>
+
+          <strong>Best regards, </strong> <br>
+
+          <strong>The Aviya Residence and Apartment team</strong>
+
+          <br><br><br>
+          <a href="#" class="aa-view-btn" style="text-align: center">Coming soon...</a>
         </div>
       </div>
     </div>
@@ -284,7 +299,7 @@
               parse_str($parts['query'], $query); 
         ?>
               <div class="aa-top-slider-single">
-                  <iframe style="width: 100%; height: 500px"
+                  <iframe class="youtube" onload="iframeLoaded()"
                       src= "https://www.youtube.com/embed/<?php echo $query['v']; ?>">
                   </iframe>
               </div>
@@ -321,7 +336,7 @@
                     <img src="src/assets/img/dummy image.png" alt="testimonial img">
                   </div>
                   <div class="aa-testimonial-info">
-                    <p>“Best Decision I’ve Ever Made!!! I was in a situation where I needed to get out of my house ASAP and Aviya Residence and Apartments came through for Me!!! Nobody else will ever beat his services and I’m relieved I don’t have the financial stress any longer!!! I will forever be grateful!!!”</p>
+                    <p>“We recently purchased a home at Aviya Residence and couldn't be happier with our experience. The entire process was smooth and stress-free, thanks to the helpful and knowledgeable team at Aviya. We love our new home and are grateful to the team for making it happen.”</p>
                   </div>
                   <!-- <div class="aa-testimonial-bio">
                     <p>David Muller</p>
@@ -329,6 +344,67 @@
                   </div> -->
                 </div>
               </li>
+
+              <li>
+                <div class="aa-testimonial-single">
+                  <div class="aa-testimonial-img">
+                    <img src="src/assets/img/dummy image.png" alt="testimonial img">
+                  </div>
+                  <div class="aa-testimonial-info">
+                    <p>“As first-time homebuyers, we were a bit intimidated by the process of buying a new home. But the team at Aviya Residence and Apartment made it so easy and enjoyable. They answered all of our questions and were always available to help. We love our new apartment and are so glad we chose Aviya.”</p>
+                  </div>
+                  <!-- <div class="aa-testimonial-bio">
+                    <p>David Muller</p>
+                    <span>Web Designer</span>
+                  </div> -->
+                </div>
+              </li>
+
+              <li>
+                <div class="aa-testimonial-single">
+                  <div class="aa-testimonial-img">
+                    <img src="src/assets/img/dummy image.png" alt="testimonial img">
+                  </div>
+                  <div class="aa-testimonial-info">
+                    <p>“We have been living at Aviya Residence and Apartment for several years now and have been extremely happy with our experience. The community is friendly and well-maintained, and the team is always quick to respond to any questions or concerns we may have. We highly recommend Aviya to anyone looking for a great place to call home.”</p>
+                  </div>
+                  <!-- <div class="aa-testimonial-bio">
+                    <p>David Muller</p>
+                    <span>Web Designer</span>
+                  </div> -->
+                </div>
+              </li>
+
+              <li>
+                <div class="aa-testimonial-single">
+                  <div class="aa-testimonial-img">
+                    <img src="src/assets/img/dummy image.png" alt="testimonial img">
+                  </div>
+                  <div class="aa-testimonial-info">
+                    <p>“As a real estate investor, I've worked with many different companies and teams. But the team at Aviya Residence and Apartment stands out for their professionalism, expertise, and dedication to their clients. I've had a great experience working with them and highly recommend their services.”</p>
+                  </div>
+                  <!-- <div class="aa-testimonial-bio">
+                    <p>David Muller</p>
+                    <span>Web Designer</span>
+                  </div> -->
+                </div>
+              </li>
+
+              <li>
+                <div class="aa-testimonial-single">
+                  <div class="aa-testimonial-img">
+                    <img src="src/assets/img/dummy image.png" alt="testimonial img">
+                  </div>
+                  <div class="aa-testimonial-info">
+                    <p>“My family and I recently moved into an apartment at Aviya Residence and Apartment and couldn't be happier. The location is perfect, the amenities are top-notch, and the team is always available to help with anything we need. We highly recommend Aviya to anyone looking for a new home.”</p>
+                  </div>
+                  <!-- <div class="aa-testimonial-bio">
+                    <p>David Muller</p>
+                    <span>Web Designer</span>
+                  </div> -->
+                </div>
+              </li>
+
             </ul>
           </div>
         </div>

@@ -9,7 +9,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <meta name='ir-site-verification-token' value='-1798574854'> 
     <title>Aviya Residence and Apartments Limited | Home</title>
     
     <!-- Favicon -->
@@ -62,9 +63,9 @@
   
   <body class="aa-price-range">  
   <!-- Pre Loader -->
-  <div id="aa-preloader-area">
+  <!-- <div id="aa-preloader-area">
     <div class="pulse"></div>
-  </div>
+  </div> -->
   <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
@@ -83,7 +84,7 @@
                     +2348094824579 | +2348163648797
                   </div>
                   <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span> aviyaresidenceandapartmentltd@gmail.com
+                    <span class="fa fa-envelope-o"></span> aviyaresidenceandapartmentsltd@gmail.com
                   </div>
                 </div>              
               </div>
@@ -103,7 +104,7 @@
 
   <!-- Start menu section -->
   <section id="aa-menu-area">
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
+    <nav class="navbar navbar-default main-navbar" role="navigation" style="background-image: url(/src/assets/img/chrismas.png)">  
       <div class="container">
         <div class="navbar-header">
           <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
@@ -121,8 +122,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="/">HOME</a></li>
-            <li><a href="properties">PROPERTIES</a></li>
+            <li><a style="font-weight: 600" href="/">HOME</a></li>
+            <li><a style="font-weight: 600" href="properties">PROPERTIES</a></li>
              <!-- <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">                
@@ -131,7 +132,7 @@
               </ul>
             </li> -->
             <!-- <li><a href="gallery.html">GALLERY</a></li>    -->
-            <li><a href="contact.php">CONTACT</a></li>
+            <li><a style="font-weight: 600" href="contact.php">CONTACT</a></li>
             <!-- <li><a href="404.html">404 PAGE</a></li> -->
           </ul>                            
         </div><!--/.nav-collapse -->       

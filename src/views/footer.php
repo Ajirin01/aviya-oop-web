@@ -50,5 +50,14 @@
   <!-- Custom js -->
   <script src="src/assets/js/custom.js"></script> 
 
+  <script>
+    function iframeLoaded() {
+      $('.youtube').css({
+        'width': '100%',
+        'height': '500px'
+      })
+    }
+  </script>
+
   </body>
 </html>
